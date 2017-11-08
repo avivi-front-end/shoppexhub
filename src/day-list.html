@@ -1,110 +1,927 @@
+<!--start partials/head.html-->
 //= partials/head.html
-
+<!--end partials/head.html-->
 <div class="global-wrapper">
+    <!--start partials/header.html-->
     //= partials/header.html
+    <!--end partials/header.html-->
     <div class="main">
-       <div class="scelet">
-           //= partials/aside.html
-           <div class="content">
-               <div class="total">
-                   <div class="total__left">
-                        <div class="total__title"><b>Сегодня:</b></div>
-                        <div class="total__box">
-                            <p>
-                                <i>
-                                    <svg width="15" height="19">
-                                        <use xlink:href="#icon-incar"></use>
-                                    </svg>
-                                </i>
-                                <span>2</span>
-                            </p>
+        <div class="mbox">
+            <div class="scelet">
+                <!--start partials/aside.html-->
+                //= partials/aside.html
+                <!--end partials/aside.html-->
+                <div class="content">
+                    <!--start partials/total.html-->
+                    //= partials/total.html
+                    <!--end partials/total.html-->
+                    <div class="content__body">
+                        <div class="daylist ">
+                            <div class="daylist__title">
+                                <p>Сегодня: <i> 2017-11-06</i></p>
+                                <a href="#" class="button"><span>закрыть день</span></a>
+                            </div>
+                            <div class="daylist__content">
+                                <div class="daylist__th">
+                                    <div class="daylist__td">
+                                        <span>день</span>
+                                    </div>
+                                    <div class="daylist__td daylist__td--second">
+                                        <span>машин</span>
+                                    </div>
+                                    <div class="daylist__td daylist__td--third">
+                                        <span>посылок</span>
+                                    </div>
+                                    <div class="daylist__td daylist__td--four">
+                                        <span>действие</span>
+                                    </div>
+                                </div>
+                                <div class="daylist__tr active">
+                                    <div class="daylist__td">
+                                        <div class="daylist__row">
+                                            <span>2017 - 10 - 18</span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--second">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>USPS:</strong>
+                                            <span>
+                                           <span>2</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--third">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>velox:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>Unknown:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--four">
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closeday"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Закрыть день</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="10px">
+                                                        <use xlink:href="#icon-eye"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Посмотреть</b>
+                                            </a>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closejournal"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">журнал</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                       <span class="daylist__spanbig">
+                                            <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-otchet"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Отчет:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                        <span class="daylist__spanbig">
+                                           <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-list"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Список:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
 
-                            <p>
-                                <i>
-                                    <svg width="13" height="21">
-                                        <use xlink:href="#icon-inbox"></use>
-                                    </svg>
-                                </i>
-                                <span>4</span>
-                            </p>
+                                       </span>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="15px" height="15px">
+                                                        <use xlink:href="#icon-print"></use>
+                                                    </svg>
+                                                </i>
+                                                <span class="dotted-underline">Печатать</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daylist__tr">
+                                    <div class="daylist__td">
+                                        <div class="daylist__row">
+                                            <span>2017 - 10 - 18</span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--second">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>USPS:</strong>
+                                            <span>
+                                           <span>2</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--third">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>velox:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>Unknown:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--four">
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closeday"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Закрыть день</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="10px">
+                                                        <use xlink:href="#icon-eye"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Посмотреть</b>
+                                            </a>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closejournal"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">журнал</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                       <span class="daylist__spanbig">
+                                            <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-otchet"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Отчет:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                        <span class="daylist__spanbig">
+                                           <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-list"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Список:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+
+                                       </span>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="15px" height="15px">
+                                                        <use xlink:href="#icon-print"></use>
+                                                    </svg>
+                                                </i>
+                                                <span class="dotted-underline">Печатать</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daylist__tr">
+                                    <div class="daylist__td">
+                                        <div class="daylist__row">
+                                            <span>2017 - 10 - 18</span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--second">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>USPS:</strong>
+                                            <span>
+                                           <span>2</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--third">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>velox:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>Unknown:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--four">
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closeday"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Закрыть день</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="10px">
+                                                        <use xlink:href="#icon-eye"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Посмотреть</b>
+                                            </a>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closejournal"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">журнал</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                       <span class="daylist__spanbig">
+                                            <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-otchet"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Отчет:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                        <span class="daylist__spanbig">
+                                           <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-list"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Список:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+
+                                       </span>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="15px" height="15px">
+                                                        <use xlink:href="#icon-print"></use>
+                                                    </svg>
+                                                </i>
+                                                <span class="dotted-underline">Печатать</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daylist__tr">
+                                    <div class="daylist__td">
+                                        <div class="daylist__row">
+                                            <span>2017 - 10 - 18</span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--second">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>USPS:</strong>
+                                            <span>
+                                           <span>2</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--third">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>velox:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>Unknown:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--four">
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closeday"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Закрыть день</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="10px">
+                                                        <use xlink:href="#icon-eye"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Посмотреть</b>
+                                            </a>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closejournal"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">журнал</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                       <span class="daylist__spanbig">
+                                            <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-otchet"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Отчет:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                        <span class="daylist__spanbig">
+                                           <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-list"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Список:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+
+                                       </span>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="15px" height="15px">
+                                                        <use xlink:href="#icon-print"></use>
+                                                    </svg>
+                                                </i>
+                                                <span class="dotted-underline">Печатать</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daylist__tr">
+                                    <div class="daylist__td">
+                                        <div class="daylist__row">
+                                            <span>2017 - 10 - 18</span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--second">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>USPS:</strong>
+                                            <span>
+                                           <span>2</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--third">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>velox:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>Unknown:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--four">
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closeday"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Закрыть день</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="10px">
+                                                        <use xlink:href="#icon-eye"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Посмотреть</b>
+                                            </a>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closejournal"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">журнал</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                       <span class="daylist__spanbig">
+                                            <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-otchet"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Отчет:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                        <span class="daylist__spanbig">
+                                           <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-list"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Список:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+
+                                       </span>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="15px" height="15px">
+                                                        <use xlink:href="#icon-print"></use>
+                                                    </svg>
+                                                </i>
+                                                <span class="dotted-underline">Печатать</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="daylist__tr">
+                                    <div class="daylist__td">
+                                        <div class="daylist__row">
+                                            <span>2017 - 10 - 18</span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--second">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>USPS:</strong>
+                                            <span>
+                                           <span>2</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--third">
+                                        <div class="daylist__row">
+                                            <b>Всего:</b>
+                                            <span>
+                                           <b>2</b>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>velox:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <strong>Unknown:</strong>
+                                            <span>
+                                           <span>3</span>
+                                           <a href="#" class="pluss-butt">
+                                               <svg>
+                                                   <use xlink:href="#icon-plus"></use>
+                                               </svg>
+                                           </a>
+                                       </span>
+                                        </div>
+                                    </div>
+                                    <div class="daylist__td daylist__td--four">
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closeday"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Закрыть день</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                            <a href="#">
+                                                <i>
+                                                    <svg width="19px" height="10px">
+                                                        <use xlink:href="#icon-eye"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">Посмотреть</b>
+                                            </a>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="19px" height="14px">
+                                                        <use xlink:href="#icon-closejournal"></use>
+                                                    </svg>
+                                                </i>
+                                                <b class="dotted-underline">журнал</b>
+                                            </a>
+                                        </div>
+                                        <div class="daylist__row">
+                                       <span class="daylist__spanbig">
+                                            <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-otchet"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Отчет:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+                                       </span>
+                                        </div>
+                                        <div class="daylist__row">
+                                        <span class="daylist__spanbig">
+                                           <span class="daylist__spanfix">
+                                               <i>
+                                                   <svg width="15" height="20">
+                                                       <use xlink:href="#icon-list"></use>
+                                                   </svg>
+                                               </i>
+                                               <b>Список:</b>
+                                           </span>
+                                           <a href="#">
+                                               <i class="small">
+                                                   <svg width="15px" height="13px">
+                                                       <use xlink:href="#icon-download"></use>
+                                                   </svg>
+                                               </i>
+                                               <span class="dotted-underline">Скачать</span>
+                                           </a>
+
+                                       </span>
+                                            <a href="#">
+                                                <i class="small">
+                                                    <svg width="15px" height="15px">
+                                                        <use xlink:href="#icon-print"></use>
+                                                    </svg>
+                                                </i>
+                                                <span class="dotted-underline">Печатать</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                       <div class="total__box">
-
-                           <p>
-                               <i>
-                                   <svg width="14" height="13">
-                                       <use xlink:href="#icon-crybox"></use>
-                                   </svg>
-                               </i>
-                               <span>3</span>
-                           </p>
-
-                       </div>
-                   </div>
-                   <div class="total__mid">
-                       <div class="total__title"><b>Всего:</b></div>
-                       <div class="total__box">
-                           <p>
-                               <i>
-                                   <svg width="13" height="21">
-                                       <use xlink:href="#icon-inbox"></use>
-                                   </svg>
-                               </i>
-                               <span>3</span>
-                           </p>
-                           <p>
-                               <i>
-                                   <svg width="14" height="20">
-                                       <use xlink:href="#icon-checkbox"></use>
-                                   </svg>
-                               </i>
-                               <span>999 999</span>
-                           </p>
-
-
-                       </div>
-                       <div class="total__box">
-
-
-                           <p>
-                               <i>
-                                   <svg width="14" height="13">
-                                       <use xlink:href="#icon-crybox"></use>
-                                   </svg>
-                               </i>
-                               <span>999 999</span>
-                           </p>
-                           <p>
-                               <i>
-                                   <svg width="13" height="23">
-                                       <use xlink:href="#icon-delbox"></use>
-                                   </svg>
-                               </i>
-                               <span>999 999</span>
-                           </p>
-
-                       </div>
-                   </div>
-                   <div class="total__right">
-                        <div class="total__items">
-                            <p><b>b2b:</b><span>999 999 999</span></p>
-                            <p><b>b2c:</b><span>35</span></p>
-                        </div>
-                       <a class="total__settings">
-                           <i>
-                               <svg width="19"  height="19">
-                                   <use xlink:href="#icon-settings"></use>
-                               </svg>
-                           </i>
-                           <b class="dotted-underline">Мои настройки</b>
-                       </a>
-                   </div>
-               </div>
-           </div>
-       </div>
+                    </div>
+                    <!--start partials/paginator.html-->
+                    //= partials/paginator.html
+                    <!--end partials/paginator.html-->
+                </div>
+            </div>
+        </div>
     </div>
+    <!--start partials/hidden-block.html-->
     //= partials/hidden-block.html
+    <!--end partials/hidden-block.html-->
+    <!--start partials/footer.html-->
     //= partials/footer.html
+    <!--end partials/footer.html-->
 </div>
 </body>
 </html>

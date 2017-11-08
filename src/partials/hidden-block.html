@@ -1,43 +1,261 @@
 <div class="hidden-block">
 
-    <div id="call_success">
-        <div class="call-success">
-             <div class="call_success">
-                 <div class="call-title">Спасибо за заявку!</div>
-                 <div class="call-subtitle">Мы свяжемся с Вами в ближайшее время</div>
-             </div>
+    <div class="journal" id="journal">
+        <div class="journal__title">
+            <span>Журнал: 2017-10-18</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
         </div>
-    </div>
+        <div class="journal__content">
+            <div class="journal__plane">
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="19" height="14">
+                                                            <use xlink:href="#icon-openday"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Открыт день</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="19" height="14">
+                                                            <use xlink:href="#icon-closeday"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Закрыт день</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="24px" height="26px">
+                                                            <use xlink:href="#icon-reopenday"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Повторно открыт день</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="24px" height="26px">
+                                                            <use xlink:href="#icon-recloseday"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Повторно закрыт день</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="15px" height="18px">
+                                                            <use xlink:href="#icon-opencar"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Открыта машина <b>АВ 4949 ВХ</b> <strong>Fedex</strong> , Водитель John Smith</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="15px" height="19px">
+                                                            <use xlink:href="#icon-closecar"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Закрыта машина <b>АВ 4949 ВХ</b> <strong>Fedex</strong> , Водитель John Smith</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="24px" height="25px">
+                                                            <use xlink:href="#icon-reopencar"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Повторно открыта машина <b>АВ 4949 ВХ</b> <strong>Fedex</strong> , Водитель John Smith</span>
+                                                </span>
+                        <div class="journal__spanfix journal__spanfix--half">
+                            <i>
+                                <svg width="13" height="21">
+                                    <use xlink:href="#icon-inbox"></use>
+                                </svg>
+                            </i>
+                            <span><b>Принято:</b> 1345 посылок,</span>
+                        </div>
+                        <div class="journal__spanfix journal__spanfix--half">
+                            <i>
+                                <svg width="14" height="20">
+                                    <use xlink:href="#icon-checkbox"></use>
+                                </svg>
+                            </i>
+                            <span><b>опознанных:</b> 1345 посылок,</span>
+                        </div>
+                        <div class="journal__spanfix journal__spanfix--half">
+                            <i>
+                                <svg width="14px" height="16px">
+                                    <use xlink:href="#icon-notrackbox"></use>
+                                </svg>
+                            </i>
+                            <span><b>без трекномеров:</b> 13 посылок,</span>
+                        </div>
+                        <div class="journal__spanfix journal__spanfix--half">
+                            <i>
+                                <svg width="14" height="13">
+                                    <use xlink:href="#icon-crybox"></use>
+                                </svg>
+                            </i>
+                            <span><b>неопознанных:</b> 13 посылок,</span>
+                        </div>
+                        <span class="journal__spanfix">
+                                                    <i>
+                                                        <svg width="14px" height="14px">
+                                                            <use xlink:href="#icon-coment"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span><b>Комментарий к машине:</b> 3 посылки были залиты маслом</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <i>
+                                                       <svg width="24px" height="25px">
+                                                            <use xlink:href="#icon-reclosecar"></use>
+                                                        </svg>
+                                                    </i>
+                                                    <span>Повторно закрыта машина <b>АВ 4949 ВХ</b> <strong>Fedex</strong> , Водитель John Smith</span>
+                                                </span>
+                    </div>
+                </div>
+                <div class="journal__item">
+                    <div class="journal__time">
+                        <span>08:00:04 AM</span>
+                    </div>
+                    <div class="journal__description">
+                                                <span class="journal__spanfix">
+                                                    <span>Комментарий 1</span>
+                                                </span>
+                        <span class="journal__spanfix">
+                                                    <span class="journal__imgitem">
+                                                        <span class="journal__img-wrap">
+                                                            <img src="images/pdf.jpg" alt="" data-object-fit>
+                                                        </span>
+                                                        <button type="button">
+                                                            <svg>
+                                                                <use xlink:href="#little-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <p>filename.pdf</p>
+                                                    </span>
+                                                    <span class="journal__imgitem">
+                                                        <span class="journal__img-wrap">
+                                                            <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                        </span>
+                                                        <button type="button">
+                                                            <svg>
+                                                                <use xlink:href="#little-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <p>filenamjkldshfjkldhsfjkdhsfhfhjfe.jpg</p>
+                                                    </span>
+                                                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="journal__bottom">
+            <textarea name="" placeholder="Комментировать"></textarea>
+            <div class="journal__buttons">
+                <div class="js-container-img">
 
-    <div id="call-popup">
-        <form action="ajax.php" name="" class="contact-form">
-            <div class="contact-form-title">
-                <h5>Lorem ipsum dolor.</h5>
-            </div>
-            <div class="contact-form-row cfix">
-                <div class="contact-form-item">
-                    <div class="contact-form-item-input form_row">
-                        <div class="form_input">
-                            <input type="text" name="contact_name" required="required" value="" placeholder="Ваше Имя">
-                        </div>
-                    </div>
                 </div>
-                <div class="contact-form-item">
-                    <div class="contact-form-item-input form_row">
-                        <div class="form_input">
-                            <input type="text" name="contact_tel" value="" required="required" placeholder="Ваш номер" class="tel-mask">
-                        </div>
-                    </div>
-                </div>
+                <label class="js-input-file">
+                    <input name="files[]" type="file" accept="image/jpeg,image/png,image/gif,application/pdf,image/bmp">
+                    <i>
+                        <svg>
+                            <use xlink:href="#screpca"></use>
+                        </svg>
+                    </i>
+                </label>
+                <button class="button" type="submit">
+                    <span>добавить запись</span>
+                </button>
             </div>
-            <div class="contact-form-row cfix">
-                <div class="contact-form-item">
-                    <button type="submit" class="contact-submit">
-                        <span>Отправить заявку</span>
-                    </button>
-                </div>
-            </div>
+
         </form>
     </div>
-
+    <div class="journal__imgitem etalon">
+        <div class="journal__img-wrap">
+            <img src="images/pdf.jpg" alt="" data-object-fit>
+        </div>
+        <button type="button">
+            <svg>
+                <use xlink:href="#little-cross"></use>
+            </svg>
+        </button>
+        <p>filename.pdf</p>
+    </div>
+    <div class="fileinput__item-wrap etalon">
+        <div class="fileinput__item">
+            <img src="images/demo/test.jpg" alt="" data-object-fit>
+            <a data-fancybox href="images/demo/test.jpg">
+                <svg width="22" height="21">
+                    <use xlink:href="#greenplus"></use>
+                </svg>
+            </a>
+            <button type="button" onclick="$(this).closest('.fileinput__item-wrap').remove()">
+                <svg width="15" height="15">
+                    <use xlink:href="#greencros"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="fileinput__item-info">
+            <p class="js-file-name"></p>
+            <p class="js-file-size"></p>
+        </div>
+    </div>
 </div>
