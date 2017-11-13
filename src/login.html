@@ -13,24 +13,24 @@
                         <use xlink:href="#logo"></use>
                     </svg>
                 </div>
-                <form class="login__bot">
+                <form class="login__bot" id="enter-popup">
                     <div class="login__title">
-                        <span>Пожалуйста, авторизируйтесь:</span>
+                        <span>Авторизация:</span>
                     </div>
                     <div class="login__row">
                         <div class="login__subttl">
                             <b>Логин:</b>
                         </div>
-                        <div class="login__input">
-                            <input type="text">
+                        <div class="login__input js-input">
+                            <input type="text" name="email" required="required">
                         </div>
                     </div>
                     <div class="login__row">
                         <div class="login__subttl">
                             <b>Пароль:</b>
                         </div>
-                        <div class="login__input">
-                            <input type="text">
+                        <div class="login__input js-input">
+                            <input type="text" name="password" required="required">
                         </div>
                     </div>
                     <div class="login__row">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="login__center">
-                        <a href="#" class="button"><span>зарегистрировать</span></a>
+                        <button class="button"><span>зарегистрировать</span></button>
                         <a href="#" class="dotted-underline"><b>забыли свой пароль?</b></a>
                     </div>
 

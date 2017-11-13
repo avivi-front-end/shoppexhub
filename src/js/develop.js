@@ -130,7 +130,46 @@ function clickClear () {
         e.preventDefault();
     });
 }
+function toolTips() {
+    var tips;
+    $(document).on('mouseenter', '[data-title]',function (e) {
+        var that = this;
+        var event = e;
+       ttInit(that);
+       ttPosition(event);
+       ttShow();
+    });
+    $(document).on('mouseleave', '[data-title]',function () {
+        ttHide();
+    });
+    $(document).on('mousemove', '[data-title]',function (e) {
+        var event = e;
+        ttPosition(event);
+    });
+    function ttInit(elem) {
+        tips = document.createElement('div');
+        $(tips).addClass('mego-tool-tip');
+        var text = $(elem).attr('data-title');
+        $('.js-width').text(text);
+        $(tips).text(text);
+    }
+    function ttPosition(event) {
+        $(tips).css('top', event.pageY);
+        var left = event.pageX + 10;
+        var ww =  $('.js-width').width();
+        if((left + ww) > $(document).width()){left = left - ww -30;}
+        $(tips).css('left', left);
+    }
+    function ttShow() {
+        $(tips).appendTo('body');
+    }
+    function ttHide() {
+        $(tips).remove();
+    }
+}
+
 $(document).ready(function () {
+    toolTips();
     if($('.js-styled').length > 0) selectStyled($('.js-styled'));
     journalLogic();
     clickClear();

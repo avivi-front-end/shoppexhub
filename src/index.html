@@ -15,7 +15,11 @@
                     <!--start partials/total.html-->
                     //= partials/total.html
                     <!--end partials/total.html-->
-                    <div class="content__body"></div>
+                    <div class="content__body">
+                        <h1>Вместимость спрайта</h1>
+                        <ul class="svg-cont"></ul>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,6 +31,26 @@
     //= partials/footer.html
     <!--end partials/footer.html-->
 </div>
+<style>
+    .svg-cont{ background-color: #f3f3f3; padding: 0; margin: 0; list-style-type: decimal;}
+    .svg-cont li{ margin-bottom: 8px; border-bottom: 1px solid #333;}
+    .svg-cont li i{ margin-left: 16px; width: 50%; text-align: right; display: inline-block;}
+    .svg-cont li span{ margin-left: 16px; width: 200px; display: inline-block;}
+    .svg-cont li b{ margin-left: 16px;}
+</style>
+<script>
+    function generateSVGSPritePreview() {
+        var items = $('body>svg symbol');
+        var svg = $('.svg-cont');
+        for (var i=0; i < items.length; i++){
+            var size = items.eq(i).attr('viewBox').split(' ');
+            svg.append('<li><i><svg width="'+size[2]+'px" height="'+size[3]+'px"><use xlink:href="#'+items.eq(i).attr('id')+'"></use></svg></i><span>id=#'+items.eq(i).attr('id')+'</span><b>viewBox='+items.eq(i).attr('viewBox')+'</b></li>');
+        }
+    }
+    $(document).ready(function () {
+        generateSVGSPritePreview();
+    });
+</script>
 </body>
 </html>
 
