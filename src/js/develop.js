@@ -167,10 +167,16 @@ function toolTips() {
         $(tips).remove();
     }
 }
-
+function fixedMenu(menu){
+    menu.css('left',($('aside').offset().left) - 25);
+    $(window).resize(function () {
+        menu.css('left',($('aside').offset().left) - 25);
+    });
+}
 $(document).ready(function () {
     toolTips();
     if($('.js-styled').length > 0) selectStyled($('.js-styled'));
+    if($('.aside__wrap').length > 0) fixedMenu($('.aside__wrap'));
     journalLogic();
     clickClear();
     $(document).on('change', '.js-input-file input',function(){
