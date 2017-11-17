@@ -126,7 +126,6 @@ function clickClear () {
     $(document).on('click', ' .js-clear', function (e) {
         var target = $(this).attr('href');
         $(target).val('').focus();
-
         e.preventDefault();
     });
 }
@@ -172,8 +171,19 @@ function fixedMenu(menu){
     $(window).resize(function () {
         menu.css('left',($('aside').offset().left) - 25);
     });
+
+}
+function fireShow(item){
+    var target = $(''+$(item).attr('data-target'));
+    $(item).toggleClass('active');
+    if($(item).hasClass('active')){
+        target.stop().slideDown();
+    }else{
+        target.stop().slideUp();
+    }
 }
 $(document).ready(function () {
+    $('.aside__menu').jScrollPane();
     toolTips();
     if($('.js-styled').length > 0) selectStyled($('.js-styled'));
     if($('.aside__wrap').length > 0) fixedMenu($('.aside__wrap'));
