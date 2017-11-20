@@ -15,12 +15,12 @@ var gulp = require('gulp'),
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
-        html: 'build/',
-        js: 'build/js/',
-        css: 'build/css/',
-        img: 'build/images/',
-        fonts: 'build/fonts/',
-        php:'build/'
+        html: 'buildhub/',
+        js: 'buildhub/js/',
+        css: 'buildhub/css/',
+        img: 'buildhub/images/',
+        fonts: 'buildhub/fonts/',
+        php:'buildhub/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -40,12 +40,12 @@ var path = {
         style: 'src/sass/*.scss',
         img: 'src/images/*.*'
     },
-    clean: './build'
+    clean: './buildhub'
 };
 
 var config = {
     server: {
-        baseDir: "./build"
+        baseDir: "./buildhub"
     },
     tunnel: false,
     host: 'localhost',
@@ -54,7 +54,7 @@ var config = {
 };
 
 gulp.task('clear:prod', function () {
-    return gulp.src(['./build/js/main.js', './build/css/style.css'], {read: false})
+    return gulp.src(['./buildhub/js/main.js', './buildhub/css/style.css'], {read: false})
         .pipe(clean());
 });
 gulp.task('html:build', function () {
@@ -115,20 +115,20 @@ gulp.task('webserver', function () {
     browserSync(config);
 });
 gulp.task('clean_css', function () {
-    return gulp.src(['./build/css/'], {read: false}).pipe(clean());
+    return gulp.src(['./buildhub/css/'], {read: false}).pipe(clean());
 });
 gulp.task('prod_css',['clean_css'],function() {
     return gulp.src(path.src.style).pipe(cache()).pipe(sass.sync().on('error', sass.logError)).pipe(autoprefixer({  browsers: ['> 0%'], cascade: false })).pipe(concat('style.css')).pipe(gulp.dest(path.build.css));
 });
 
 gulp.task('clean_js',['prod_js'], function () {
-    return gulp.src(['./build/js/plugins/', './build/js/basic_scripts.js', './build/js/develop/'], {read: false}).pipe(clean());
+    return gulp.src(['./buildhub/js/plugins/', './buildhub/js/basic_scripts.js', './buildhub/js/develop/'], {read: false}).pipe(clean());
 });
 gulp.task('prod_js', function() {
-    return gulp.src(['./build/js/plugins/*.js', './build/js/basic_scripts.js', './build/js/develop/*.js']).pipe(concat('main.js')).pipe(gulp.dest(path.build.js));
+    return gulp.src(['./buildhub/js/plugins/*.js', './buildhub/js/basic_scripts.js', './buildhub/js/develop/*.js']).pipe(concat('main.js')).pipe(gulp.dest(path.build.js));
 });
 gulp.task('prod_html', function() {
-    gulp.src('./build/*.html')
+    gulp.src('./buildhub/*.html')
         .pipe(htmlreplace({
             'css': 'css/style.css',
             'js': 'js/main.js'
@@ -153,7 +153,7 @@ gulp.task('css_min', function() {
 });
 
 gulp.task('js_min', function(){
-    gulp.src('./build/js/plugins.js')
+    gulp.src('./buildhub/js/plugins.js')
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));

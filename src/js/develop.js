@@ -182,6 +182,21 @@ function fireShow(item){
         target.stop().slideUp();
     }
 }
+function showHideFilter(item) {
+    $(item).toggleClass('active');
+    if($(item).hasClass('active')){
+        $(item).next().stop().slideDown(100);
+    }else{
+        $(item).next().stop().slideUp(100);
+    }
+}
+function clearFilter(item) {
+    var cont = $(item).closest('form');
+    var inputs = cont.find('input, select');
+    inputs.each(function () {
+        $(this).val('');
+    });
+}
 $(document).ready(function () {
     $('.aside__menu').jScrollPane();
     toolTips();
