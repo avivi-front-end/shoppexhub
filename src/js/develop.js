@@ -1,11 +1,11 @@
 var preloaderFile ='<div class="preloadfile"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="preloadfile__svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="rgb(74,118,166)" stroke-width="2" fill="transparent"    /><circle cx="12" cy="12" r="10"  stroke="rgb(202,205,211)" stroke-width="2" class="preloadfile__circle"/></svg></div>';
 function readURL(input) {
     if (input.files && input.files[0]) {
-        var mass = ["image/jpeg", "image/jpg", "image/png", "image/gif", "application/pdf", "image/bmp"];
+        var mass = ["image/jpeg", "image/jpg", "image/png", "image/gif", "application/pdf", "image/bmp", "text/csv"];
         var nt = document.createElement('input');
         nt.setAttribute("type", "file");
         nt.setAttribute("name", 'files[]');
-        nt.setAttribute("accept", "image/jpeg,image/png,image/gif,application/pdf,image/bmp");
+        nt.setAttribute("accept", "image/jpeg,image/png,image/gif,application/pdf,image/bmp,text/csv");
         var reader = new FileReader();
         reader.onload = function (e) {
             var div = $('.journal__imgitem.etalon').clone();
@@ -25,7 +25,7 @@ function readURL(input) {
                 $(input).closest('label').prepend(nt);
                 $(input).remove();
             }
-            if(typec == "application/pdf"){
+            if(typec == "application/pdf" || typec == "text/csv"){
                 if(size > 11000000){
                     declinetung();
                     alert('max size 4 pdf 10Mb');
