@@ -483,15 +483,18 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
             }
         }
     }
-    &__result{border:1px dashed #e7e9ee; display: flex; align-items: stretch; padding:8px; margin-bottom: 23px;
+    &__result{border:1px dashed #e7e9ee;
         b{ text-transform: uppercase;}
     }
+    &__top{display: flex; align-items: stretch; padding:8px; margin-bottom: 23px; }
     &__fsb{border-right:1px solid #e7e9ee; display: flex; justify-content: space-between; align-items: center; flex-grow: 1; padding: 0 13px; height: 46px;
         img{vertical-align: baseline; margin-right: 15px;}
     }
     &__country{ flex-shrink: 0; width: 72px; display: flex; justify-content: center; align-items: center;
         i{ margin-right: 10px;}
     }
+    &__bot{ display: flex; justify-content: flex-start; align-items: flex-start;}
+    &__botcell{ display: flex; justify-content: flex-start; align-items: flex-start;}
 }
 .styled{ display: inline-block; margin-right: 8px; vertical-align: middle; cursor: pointer;
     input[type=checkbox]{ display: none;}
