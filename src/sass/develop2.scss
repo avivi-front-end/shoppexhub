@@ -1,0 +1,4 @@
+.no-exist { display: flex; align-items: center; justify-content: center; flex-direction: column; height: calc(100vh - 160px);
+  &__text {color: #40434e; font-size: 24px; margin-top: 15px; margin-bottom: 5px;}
+  &__logout {background-color: #ffffff; height: auto; padding: 20px 0 30px 0;}
+}
