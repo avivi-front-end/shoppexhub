@@ -1,0 +1,245 @@
+<!--start partials/head.html-->
+//= partials/head.html
+<!--end partials/head.html-->
+<div class="global-wrapper">
+
+    <div class="main">
+        <div class="mbox">
+            <div class="scelet">
+                <!--start partials/aside.html-->
+                //= partials/aside.html
+                <!--end partials/aside.html-->
+                <div class="content">
+                    <!--start partials/total.html-->
+                    //= partials/total.html
+                    <!--end partials/total.html-->
+                    <div class="content__body">
+                        <div class="sclad">
+                            <div class="sclad__ltr">
+                                <a href="index.html" class="button button--fff  button--back">
+                                    <span>на главную</span>
+                                </a>
+                            </div>
+                            <div class="search__tumbler">
+                                <label>
+                                    <input type="radio" name="same01">
+                                    <p>
+                                        <i>
+                                            <svg width="20px" height="20px">
+                                                <use xlink:href="#icon-tracknum"></use>
+                                            </svg>
+                                        </i>
+                                        <b>Искать по трек номеру</b>
+                                    </p>
+                                </label>
+                                <label>
+                                    <input type="radio" name="same01">
+                                    <p>
+                                        <i>
+                                            <svg width="20px" height="20px">
+                                                <use xlink:href="#icon-card"></use>
+                                            </svg>
+                                        </i>
+                                        <b>Искать по user id</b>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="sclad__grow-child">
+                                <form class="search__field">
+                                    <input type="text" id="inp01">
+                                    <button type="submit" class="button button--fff">
+                                        <span>искать по треку</span>
+                                    </button>
+                                </form>
+                                <a href="#inp01" class="button-simple js-clear">
+                                    <i>
+                                        <svg width="15" height="15">
+                                            <use xlink:href="#little-cross"></use>
+                                        </svg>
+                                    </i>
+                                    <b class="dotted-underline">очистить</b>
+                                </a>
+                            </div>
+                            <div class="important important--center">
+                                <i>
+                                    <svg>
+                                        <use xlink:href="#cryalert"></use>
+                                    </svg>
+                                </i>
+                                <h2>трек-номер не найден</h2>
+                            </div>
+                            <div class="dayinner__subtitle">
+                                <span>Похожие результаты:</span>
+                            </div>
+                            <div class="dayinner__table accordeon">
+                                <table>
+                                    <tr>
+                                        <th><span>#</span></th>
+                                        <th><span>трек номер</span></th>
+                                        <th><span>дата создания посылки клиентом</span></th>
+                                        <th><span>Имя клиента</span></th>
+                                        <th><span>id клиента</span></th>
+                                        <th><span>страна</span></th>
+                                        <th><span>Клиент</span></th>
+                                        <th><span>Действие</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td><span>1</span></td>
+                                        <td><span class="accordeon__flex--aic js-show-additional" onclick="dropdownTable(this);" data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497">39495....99497   <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg></span></td>
+                                        <td><span>03-03-2017 11:23:53</span></td>
+                                        <td><span>Sergey Tuzenkov</span></td>
+                                        <td><span>VB1001001</span></td>
+                                        <td><span class="accordeon__flex--aic"><img src="images/ua.jpg" alt="">UA</span></td>
+                                        <td><span>Velox Box</span></td>
+                                        <td width="160">
+                                            <span class="sclad__rtl">
+                                                <a href="#" class="button button--fff"><span>открыть</span></a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="accordeon__hiiden">
+                                        <td colspan="8">
+                                            <div class="accordeon__table">
+                                                <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
+                                                <table>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Наименование</th>
+                                                        <th>ссылка</th>
+                                                        <th>шт.</th>
+                                                        <th>цена за шт.</th>
+                                                        <th>сумма</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Футболка</td>
+                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                                        <td>10</td>
+                                                        <td>$5.00</td>
+                                                        <td>$50.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Футболка</td>
+                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                                        <td>10</td>
+                                                        <td>$5.00</td>
+                                                        <td>$50.00</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span></td>
+                                        <td><span class="accordeon__flex--aic js-show-additional" onclick="dropdownTable(this);" data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497">39495....99497   <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg></span></td>
+                                        <td><span>03-03-2017 11:23:53</span></td>
+                                        <td><span>Sergey Tuzenkov</span></td>
+                                        <td><span>VB1001001</span></td>
+                                        <td><span class="accordeon__flex--aic"><img src="images/ua.jpg" alt="">UA</span></td>
+                                        <td><span>Velox Box</span></td>
+                                        <td width="160">
+                                            <span class="sclad__rtl">
+                                                <a href="#" class="button button--fff"><span>открыть</span></a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="accordeon__hiiden">
+                                        <td colspan="8">
+                                            <div class="accordeon__table">
+                                                <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
+                                                <table>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Наименование</th>
+                                                        <th>ссылка</th>
+                                                        <th>шт.</th>
+                                                        <th>цена за шт.</th>
+                                                        <th>сумма</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Футболка</td>
+                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                                        <td>10</td>
+                                                        <td>$5.00</td>
+                                                        <td>$50.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Футболка</td>
+                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                                        <td>10</td>
+                                                        <td>$5.00</td>
+                                                        <td>$50.00</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3</span></td>
+                                        <td><span class="accordeon__flex--aic js-show-additional" onclick="dropdownTable(this);" data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497">39495....99497   <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg></span></td>
+                                        <td><span>03-03-2017 11:23:53</span></td>
+                                        <td><span>Sergey Tuzenkov</span></td>
+                                        <td><span>VB1001001</span></td>
+                                        <td><span class="accordeon__flex--aic"><img src="images/ua.jpg" alt="">UA</span></td>
+                                        <td><span>Velox Box</span></td>
+                                        <td width="160">
+                                            <span class="sclad__rtl">
+                                                <a href="#" class="button button--fff"><span>открыть</span></a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="accordeon__hiiden">
+                                        <td colspan="8">
+                                            <div class="accordeon__table">
+                                                <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
+                                                <table>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Наименование</th>
+                                                        <th>ссылка</th>
+                                                        <th>шт.</th>
+                                                        <th>цена за шт.</th>
+                                                        <th>сумма</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Футболка</td>
+                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                                        <td>10</td>
+                                                        <td>$5.00</td>
+                                                        <td>$50.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Футболка</td>
+                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                                        <td>10</td>
+                                                        <td>$5.00</td>
+                                                        <td>$50.00</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--start partials/hidden-block.html-->
+    //= partials/hidden-block.html
+    <!--end partials/hidden-block.html-->
+    <!--start partials/footer.html-->
+    //= partials/footer.html
+    <!--end partials/footer.html-->
+</div>
+</body>
+</html>
+

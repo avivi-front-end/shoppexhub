@@ -46,6 +46,60 @@ function readURL(input) {
 
     }
 }
+function readURLOne(input) {
+    if (input.files && input.files[0]) {
+        var nt = document.createElement('input');
+        nt.setAttribute("type", "file");
+        nt.setAttribute("name", $(input).attr('name'));
+        nt.setAttribute("accept", "text/csv");
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var div = $('.journal__imgitem.etalon').clone();
+            div.removeClass('etalon');
+            div.find('button').attr('onclick',"oncloseClick($(this))");
+            var img = div.find('img');
+            var typec = input.files[0].type;
+            var size = input.files[0].size;
+            div.find('p').text(input.files[0].name);
+            $(img).attr('src', e.target.result);
+            function acceptung() {
+                div.append(preloaderFile);
+                $(input).closest('.journal__buttons').find('.js-container-img').append(div);
+                $(input).closest('label').prepend(nt);
+                div.append(input);
+            }
+            function declinetung() {
+                $(input).closest('label').prepend(nt);
+                $(input).remove();
+            }
+            if(typec == "text/csv"){
+                if(size > 11000000){
+                    declinetung();
+                    alert('max size 4 pdf 10Mb');
+                }else{
+                    $(img).attr('src', 'images/pdf.jpg');
+                    acceptung();
+                }
+            }else{
+                declinetung();
+            }
+            checkScanpageInputFile(0);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+function checkScanpageInputFile(i) {
+    if($('.js-container-img .journal__imgitem').length > i){
+        $('.js-input-file-simple').css('display','none');
+    }else{
+        $('.js-input-file-simple').css('display','inline-flex');
+    }
+
+}
+function oncloseClick(elem) {
+    elem.closest('.fileinput__item-wrap').remove();
+    checkScanpageInputFile(1);
+}
 function readFile(input) {
     if (input.files && input.files[0]) {
         var mass = ["image/jpeg", "image/jpg", "image/png", "image/gif", "application/pdf", "image/bmp"];
@@ -197,6 +251,15 @@ function clearFilter(item) {
         $(this).val('');
     });
 }
+function dropdownTable(item){
+    $(item).toggleClass('active');
+    var box = $(item).closest('tr').next('.accordeon__hiiden').find('.accordeon__table');
+    if($(item).hasClass('active')){
+        box.stop().slideDown();
+    }else{
+        box.stop().slideUp();
+    }
+}
 $(document).ready(function () {
     $('.aside__menu').jScrollPane();
     toolTips();
@@ -206,6 +269,9 @@ $(document).ready(function () {
     clickClear();
     $(document).on('change', '.js-input-file input',function(){
         readURL(this);
+    });
+    $(document).on('change', '.js-input-file-simple input',function(){
+        readURLOne(this);
     });
     $(document).on('change', '.js-tablecheck',function(){
         if($(this).prop('checked')){
@@ -220,5 +286,4 @@ $(document).ready(function () {
     $(document).on('click', '.journal__imgitem button',function(){
         $(this).closest('.journal__imgitem').remove();
     });
-
 });
