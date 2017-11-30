@@ -260,6 +260,17 @@ function dropdownTable(item){
         box.stop().slideUp();
     }
 }
+function dropdownBigTab(item){
+    $('.search__bigtab').removeClass('active');
+    $(item).parent().addClass('active');
+    var box = $(item).parent().find('.accordeon');
+    if($(item).parent().hasClass('active')){
+        $('.search__bigtab .accordeon').stop().slideUp();
+        box.stop().slideDown();
+    }else{
+        box.stop().slideUp();
+    }
+}
 $(document).ready(function () {
     $('.aside__menu').jScrollPane();
     toolTips();

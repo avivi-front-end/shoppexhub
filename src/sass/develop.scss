@@ -514,8 +514,10 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     }
     &__top{display: flex; align-items: stretch; padding:8px;  }
     &__fsb{border-right:1px solid #e7e9ee; display: flex; justify-content: space-between; align-items: center; flex-grow: 1; padding: 0 13px; height: 46px;
+        svg,
         img{vertical-align: baseline; margin-right: 15px;}
     }
+    &__fss{ display: flex; justify-content: flex-start; align-items: center;}
     &__country{ flex-shrink: 0; width: 72px; display: flex; justify-content: center; align-items: center;
         i{ margin-right: 10px;}
     }
@@ -530,6 +532,14 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
         svg{ margin-right: 12px;}
         b{ text-transform: uppercase;}
         a{ display: flex; justify-content: flex-start; align-items: center;}
+    }
+    &__bigtab{ margin-bottom: 5px;
+        .search__result{ margin-bottom: 0; position: relative;}
+        .search__result:before{  border:1px solid transparent; width: 100%; height: 100%; left: 0; top: 0; position: absolute; content: '';}
+        .dayinner__table{ display: none;}
+        &.active .search__result{ border:1px solid #4673a4;
+            &:before{ border-color:  #4673a4;}
+        }
     }
 }
 .styled{ display: inline-block; margin-right: 8px; vertical-align: middle; cursor: pointer;
