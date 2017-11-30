@@ -94,7 +94,6 @@ function checkScanpageInputFile(i) {
     }else{
         $('.js-input-file-simple').css('display','inline-flex');
     }
-
 }
 function oncloseClick(elem) {
     elem.closest('.fileinput__item-wrap').remove();
@@ -209,7 +208,8 @@ function toolTips() {
     function ttPosition(event) {
         $(tips).css('top', event.pageY);
         var left = event.pageX + 10;
-        var ww =  $('.js-width').width();
+        var ww =  $('.js-width').width() > 500 ? 500 :  $('.js-width').width();
+
         if((left + ww) > $(document).width()){left = left - ww -30;}
         $(tips).css('left', left);
     }
@@ -238,10 +238,11 @@ function fireShow(item){
 }
 function showHideFilter(item) {
     $(item).toggleClass('active');
+    var box = $(item).closest('.manifest__showhide-container').find('.manifest__showhide');
     if($(item).hasClass('active')){
-        $(item).next().stop().slideDown(100);
+        box.stop().slideDown(100);
     }else{
-        $(item).next().stop().slideUp(100);
+        box.stop().slideUp(100);
     }
 }
 function clearFilter(item) {
@@ -255,21 +256,47 @@ function dropdownTable(item){
     $(item).toggleClass('active');
     var box = $(item).closest('tr').next('.accordeon__hiiden').find('.accordeon__table');
     if($(item).hasClass('active')){
-        box.stop().slideDown();
+        box.stop().slideDown(100);
     }else{
-        box.stop().slideUp();
+        box.stop().slideUp(100);
     }
 }
 function dropdownBigTab(item){
-    $('.search__bigtab').removeClass('active');
-    $(item).parent().addClass('active');
     var box = $(item).parent().find('.accordeon');
     if($(item).parent().hasClass('active')){
         $('.search__bigtab .accordeon').stop().slideUp();
-        box.stop().slideDown();
+        $('.search__bigtab').removeClass('active');
+        box.stop().slideUp(100);
     }else{
-        box.stop().slideUp();
+        $('.search__bigtab').removeClass('active');
+        $(item).parent().addClass('active');
+        box.stop().slideDown(100);
     }
+}
+function toggleHidden(item){
+    var box =  $(item).closest('.tickets__item').find('.accordeon__table');
+    if($(item).hasClass('active')){
+        $('.tickets__item .accordeon__table').stop().slideUp();
+        $('.js-th-btn').removeClass('active');
+        box.stop().slideUp(100);
+    }else{
+        $('.js-th-btn').removeClass('active');
+        $(item).addClass('active');
+        box.stop().slideDown(100);
+    }
+}
+function lostTabs(item){
+    if($(item).hasClass('active')){
+        $('.lost__tabs li').removeClass('active');
+        //чтото дєлай
+    }else{
+        $('.lost__tabs li').removeClass('active');
+        $(item).addClass('active');
+        // и не говори спасибо))
+    }
+}
+function deleteTag(item) {
+    item.remove();
 }
 $(document).ready(function () {
     $('.aside__menu').jScrollPane();
