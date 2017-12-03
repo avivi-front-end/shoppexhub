@@ -231,9 +231,9 @@ function fireShow(item){
     var target = $(''+$(item).attr('data-target'));
     $(item).toggleClass('active');
     if($(item).hasClass('active')){
-        target.stop().slideDown();
+        target.stop().slideDown(100);
     }else{
-        target.stop().slideUp();
+        target.stop().slideUp(100);
     }
 }
 function showHideFilter(item) {
@@ -298,7 +298,64 @@ function lostTabs(item){
 function deleteTag(item) {
     item.remove();
 }
+function inputNumber() {
+    $(document).on('click', '.js-number-minus', function () {
+        var val = getVal($(this));
+        val--;
+        val = val < 1 ? 1 : val;
+        $(this).closest('.js-input-number').find('input').val(val);
+    });
+    $(document).on('click', '.js-number-plus', function () {
+        var val = getVal($(this));
+        val++;
+        $(this).closest('.js-input-number').find('input').val(val);
+    });
+    function getVal(butt) {
+        var val =  parseInt(butt.closest('.js-input-number').find('input').val());
+        val = (typeof val == "number" && !isNaN(val)) ? val : 0;
+        return val;
+    }
+    $(document).on('keypress', '.js-input-number', function (evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+        return true;
+    })
+
+}
+function generateRow(){
+    var i = $('.same-table table tr:last-child').index();
+    $(document).on('click', '.js-generate-butt', function () {
+        var elem =  $('.js-etalon tr').clone();
+        elem.find('input[name *=name]').attr({ 'name':'order['+i+'][name]'});
+        elem.find('input[name *=count]').attr({'name':'order['+i+'][count]'});
+        elem.find('input[name *=descr]').attr({'name':'order['+i+'][descr]'});
+        elem.find('input[name *=check]').attr({'name':'order['+i+'][check]'});
+
+        $('.same-table table tr:last-child').after(elem);
+        i++;
+        chexkForDelItem();
+    });
+}
+function delItemOrder() {
+    $(document).on('click', '.js-delete-item', function () {
+        if($(this).hasClass('disabled')) return false;
+        $(this).closest('tr').remove();
+        chexkForDelItem();
+    });
+}
+function chexkForDelItem(){
+    var i = $('.js-delete-item').length;
+    if(i > 2){
+        $('.js-delete-item').removeClass('disabled');
+    }else{
+        $('.js-delete-item').addClass('disabled');
+    }
+}
 $(document).ready(function () {
+    generateRow();
+    inputNumber();
+    delItemOrder();
+    chexkForDelItem();
     $('.aside__menu').jScrollPane();
     toolTips();
     if($('.js-styled').length > 0) selectStyled($('.js-styled'));

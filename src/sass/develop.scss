@@ -34,12 +34,13 @@ input, textarea{
     &::-moz-placeholder {color:#212121;opacity:1;}
     &:-ms-input-placeholder {color:#212121;}
 }
+[disabled]{ color: #40434e; background-color: #fff;}
 table{ width: 100%;}
 th{ background-color: #4673a4; text-transform: uppercase; text-align: left; color: #fff; padding: 9px; }
 td{padding:9px; border-bottom:1px solid #f3f3f3; height: 60px;}
 .main{ width: 100%; overflow: hidden;}
 .dotted-underline,
-a.dotted-underline { position: relative; text-decoration: none; border: none; background: transparent; border-bottom: 1px dotted #42b79a; cursor: pointer; color: #42b79a;
+a.dotted-underline { position: relative; text-decoration: none; border: none; background: transparent; border-bottom: 1px dotted #42b79a; cursor: pointer; color: #42b79a;  border-top: 1px solid transparent;
     &:hover {color: #2b634d; border-bottom: 1px dotted transparent;}
     &:active { color: #2b634d; border-bottom: 1px dotted #2b634d; }
 }
@@ -88,7 +89,7 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     &__wrap{ width: 287px;  background-color: #4673a4; position: fixed; top: 0; padding-top: 20px; padding-left: 25px;}
 }
 .button{border:none; background-color: transparent; padding: 0; cursor: pointer;text-decoration: none;  font-weight: 700; display: inline-block; vertical-align: top;
-    span{ display: inline-flex; height: 34px;  line-height: 34px; border: 2px solid #42b79a; align-items: center; justify-content: center; background-color: #42b79a; padding: 0 45px; text-transform: uppercase; color: #fff; white-space: nowrap; }
+    span{ display: inline-flex; height: 34px;  line-height: 35px; border: 2px solid #42b79a; align-items: center; justify-content: center; background-color: #42b79a; padding: 0 45px; text-transform: uppercase; color: #fff; white-space: nowrap; }
     &:hover span{ background-color: #2b634d; border: 2px solid #2b634d;}
     &--fff{
         span{ color: #42b79a; background-color: transparent; }
@@ -158,6 +159,10 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
         &.sclad__ltr{align-items: center;}
         span,b{ margin-right: 12px;}
     }
+}
+.client__notfound{ display: flex; justify-content: flex-start; align-items: center;
+    svg{ width: 19px; height: 15px; margin-right: 12px;}
+    b{ text-transform: uppercase; color: #cbcfd5; margin-top: 1px;}
 }
 .dayinner{
     &__title{ display: flex; justify-content: space-between; align-items: center;    padding: 19px 0 16px;
@@ -232,7 +237,7 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     label.fileinput__label{ margin-left: 0; width: auto; flex-shrink: 0;
         input{ display: none;}
     }
-    b{ text-transform: none; width: 292px; flex-shrink: 0; padding-top: 12px;}
+    b{ text-transform: uppercase; width: 292px; flex-shrink: 0; padding-top: 12px;}
     &__field{ width: 100%;border:1px solid #cbcfd5; height: 34px; line-height: 34px; flex-grow: 1; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;}
     &__row{ display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; width: 100%}
     &__result{ margin: 0 -15px; display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; padding: 14px 0 5px;}
@@ -316,6 +321,11 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     i{ height: 36px; position: absolute; left: 0; top: 0; width: 26px; justify-content: flex-end; align-items: center; display: flex;}
     i + input[type=text]{padding: 0 15px 0 32px;}
 }
+.js-input-number{ position: relative;
+  input[type=text]{ text-align: center; padding: 0 29px;}
+}
+.js-number-minus{ position: absolute; left: 5px; top: 5px; cursor: pointer;}
+.js-number-plus{ position: absolute; right: 5px; top: 5px; cursor: pointer;}
 .jq-selectbox{ width: 100%; }
 .jq-selectbox__select{border: 1px solid #cbcfd5; background: #fff; border-radius: 0; box-shadow: none; height: 36px;
     &:hover{ background: #fff;}
@@ -324,6 +334,7 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
 .jq-selectbox__trigger-arrow {top: 10px; right: 11px; width: 8px; height: 8px; border-top: 1px solid #999; border-right: 1px solid #999; border-left:0; transform: rotate(135deg);}
 .jq-selectbox:hover .jq-selectbox__trigger-arrow { border-top-color: #999; }
 .jq-selectbox li:hover { background-color: #4673a4;}
+.js-delete-item.disabled{pointer-events: none; opacity: 0.3;}
 .important{ width: 100%; border:2px solid #ff3030; display: flex; justify-content: flex-start; align-items: flex-start;margin: 16px 0; padding: 14px 55px 14px 12px; position: relative; background: rgba(255,0,0,0.04);
     i{ margin-right: 32px;
         svg{ width: 52px; height: 52px;}
@@ -418,11 +429,11 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     li{
         &:first-child,
         &:last-child{
-            a{border-width: 2px 2px 0 0; width: 11px; height: 11px; background-color: transparent; transform: rotate(45deg); margin-left: 8px;
+            a{border-width: 0 2px 2px 0; width: 11px; height: 11px; background-color: transparent; transform: rotate(-45deg); margin-left: 8px;
                 &:hover{background-color: transparent; border-color: #42b79a;}
             }
         }
-        &:first-child a{border-width:  0 0 2px 2px; margin-left: 4px; margin-right: 8px;}
+        &:first-child a{border-width:  0 0 2px 2px; margin-left: 4px; margin-right: 8px;  transform: rotate(45deg);}
     }
     a{ text-decoration: none; display: inline-flex; justify-content: center; align-items: center; border: 1px solid #42b79a; color: #42b79a; font-weight: 700; font-size: 14px; width: 33px; height: 32px; margin: 0 4px; padding-top: 1px;
         &.active,
@@ -489,11 +500,15 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     }
     &__row{ display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;  padding-bottom: 10px;
         &--help{ display: flex; justify-content: space-between; align-items: center; flex-grow: 1;}
-        b{ text-transform: none; width: 292px; flex-shrink: 0; padding-top: 12px;}
+        b{ width: 292px; flex-shrink: 0; padding-top: 12px; text-transform: uppercase;}
         textarea{ width: 100%;border:1px solid #cbcfd5; padding: 10px 15px; resize: none; flex-grow: 1; height: 108px;}
         input{border:1px solid #cbcfd5; height: 36px; line-height: 36px; flex-grow: 1; padding: 0 15px; width:100%;}
         label{ width: 135px; text-align: right; margin-left: 45px; flex-shrink: 0;}
     }
+}
+.same-table{ margin-bottom: 50px;
+    &__butts{ display: flex; justify-content: space-between; align-items: center; margin:12px 0;}
+    button{ text-transform: uppercase;}
 }
 .sclad{ padding-top: 18px;
     &__grow-child{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;
@@ -506,6 +521,9 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     &__rtl{ display: flex; align-items: flex-start; justify-content: flex-end; margin-bottom: 18px;}
     &__center{ display: flex; align-items: flex-start; justify-content: center; margin-bottom: 18px;}
     &__sb{ display: flex; align-items: flex-start; justify-content: space-between;}
+    &__sbc{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;
+        .dayinner__subtitle{ margin-bottom: 0;}
+    }
 }
 .status{ background-color: #a3d07f; color: #fff; text-transform: uppercase; border-radius: 10px; display: inline-flex; min-height: 20px; font-size: 11px; position: relative; min-width: 200px; justify-content: center; align-items: center;
     &--01{ background-color: #a3d07f;svg{ width: 12px;height: 10px;}}
@@ -551,10 +569,13 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     &__fsb{border-right:1px solid #e7e9ee; display: flex; justify-content: space-between; align-items: center; flex-grow: 1; padding: 0 13px; height: 46px;
         svg,
         img{vertical-align: baseline; margin-right: 15px;}
+        [data-title] svg{ margin-left: 8px; fill:rgb(70, 115, 164);}
+        span + .button{ margin-left: 24px;}
+        &:last-child{ border-right:0;}
     }
     &__fss{ display: flex; justify-content: flex-start; align-items: center;}
     &__country{ flex-shrink: 0; width: 72px; display: flex; justify-content: center; align-items: center;
-        i{ margin-right: 10px;}
+        i{ margin-right: 10px; display: inline-block; line-height: 0;}
     }
     &__bot{ display: flex; justify-content: flex-start; align-items: flex-start;  padding:8px;}
     &__botcell{ display: flex; justify-content: flex-start; align-items: flex-start; width: 30%; padding: 0 13px;
@@ -650,18 +671,27 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     }
     &__hidden{ position: absolute; width: 100%; background-color: #fff; z-index:10;}
     &__subwrap{display: flex; justify-content: flex-start; align-items: stretch; flex-grow: 1;}
-    &__subbottom{ width: 100%;  position: relative; padding: 13px 0 6px;
-        p{display: flex; justify-content: flex-start; align-items: center; margin: 0; }
-        b{ margin-bottom: 0; margin-right: 12px;}
-        svg{ margin-right: 12px; fill:rgb(70, 115, 164);}
-        &:hover .tickets__subhidden{ display: block;}
+    &__subbottom { position: relative; padding: 13px 0 6px; display: flex; justify-content: space-between; align-items: center;
+        p { display: inline-flex; justify-content: flex-start; align-items: center; margin: 0; }
+        b { margin-bottom: 0; margin-right: 12px; }
+        svg { margin-right: 12px; fill: rgb(70, 115, 164);    margin-bottom: 2px; }
+
     }
-    &__subhidden{ display: none; position: absolute; background-color: #fff; padding: 16px; box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.13);
+    &__hover{ display: inline-block;
+        &:hover { width: 100%;
+            .tickets__subhidden { display: block; }
+        }
+    }
+    &__subhidden{ display: none; left: -9px; top: 90%;position: absolute; background-color: #fff; padding: 16px; box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.13);
         svg{ margin-right: 0;}
         .fileinput__item-wrap{ width: 68px; display: inline-block;}
         .fileinput__item{ height: 97px; margin-bottom: 8px;}
     }
-
+    &__adiictbutts{ flex-shrink: 0; display: flex; justify-content: flex-start; align-items: center;
+        p{ display: inline-flex; justify-content: flex-start; align-items: center; margin-right: 24px;
+            &.active svg{transform:rotate(180deg);}
+        }
+    }
 
 }
 .total{ background-color: #f8f8f8;   padding: 13px 0 11px 30px; position: relative; min-height: 87px;

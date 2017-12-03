@@ -1,5 +1,46 @@
 <div class="hidden-block">
-
+    <table  class="js-etalon">
+        <tr>
+            <td>
+                <div class="js-input"><input type="text" name="order[][name]"></div>
+            </td>
+            <td  width="100">
+                <div class="js-input-number js-input">
+                    <div class="js-number-minus">
+                        <svg  width="10" height="10">
+                            <circle cx="5" cy="5" r="4" stroke="black" stroke-width="3" fill="red" />
+                        </svg>
+                    </div>
+                    <input type="text" placeholder="" name="order[][count]" value="1" maxlength="2">
+                    <div class="js-number-plus">
+                        <svg  width="10" height="10">
+                            <circle cx="5" cy="5" r="4" stroke="black" stroke-width="3" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="js-input"><input type="text" name="order[][descr]"></div>
+            </td>
+            <td>
+                <label>
+                    <div class="styled">
+                        <input type="checkbox" name="order[][check]">
+                        <i>
+                            <svg>
+                                <use xlink:href="#checkbox"></use>
+                            </svg>
+                        </i>
+                    </div>
+                </label>
+            </td>
+            <td  width="35">
+                <button type="button" class="js-delete-item">
+                    <svg width="15" height="15"><use xlink:href="#greencros"></use></svg>
+                </button>
+            </td>
+        </tr>
+    </table>
     <div class="journal" id="journal">
         <div class="journal__title">
             <span>Журнал: 2017-10-18</span>
