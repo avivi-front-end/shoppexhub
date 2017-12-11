@@ -88,14 +88,19 @@
                 <p data-title="тестовий тултипс"><b>b2c:</b><span>35</span></p>
             </div>
             <div class="total__strech">
-                <a class="total__settings">
+                <div class="total__settings">
                     <i>
                         <svg width="19"  height="19">
                             <use xlink:href="#icon-settings"></use>
                         </svg>
                     </i>
-                    <b class="dotted-underline"  data-title="тестовий тултипс тестовий тултипс тестовий тултипс">Константин малонемножский</b>
-                </a>
+                    <b class="dotted-underline" onclick="fireShow(this)" data-target="#menuuser">Константин малонемножский</b>
+                    <ul class="total__menu" id="menuuser">
+                        <li><a href="#">test text</a></li>
+                        <li><a href="#">test text 2</a></li>
+                        <li><a href="#">test logout</a></li>
+                    </ul>
+                </div>
                 <div class="total__select">
                     <i>
                         <svg width="20"  height="17">

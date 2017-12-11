@@ -72,14 +72,10 @@ function readURLOne(input) {
                 $(input).closest('label').prepend(nt);
                 $(input).remove();
             }
-            if(typec == "text/csv"){
-                if(size > 11000000){
-                    declinetung();
-                    alert('max size 4 pdf 10Mb');
-                }else{
-                    $(img).attr('src', 'images/pdf.jpg');
-                    acceptung();
-                }
+            var mass = input.files[0].name.split('.');
+            if(mass.slice(-1)[0] == "csv"){
+                $(img).attr('src', 'images/file.jpg');
+                acceptung();
             }else{
                 declinetung();
             }
@@ -221,10 +217,10 @@ function toolTips() {
     }
 }
 function fixedMenu(menu){
-    menu.css('left',($('aside').offset().left) - 25);
-    $(window).resize(function () {
-        menu.css('left',($('aside').offset().left) - 25);
-    });
+    // menu.css('left',($('aside').offset().left) - 25);
+    // $(window).resize(function () {
+    //     menu.css('left',($('aside').offset().left) - 25);
+    // });
 
 }
 function fireShow(item){
@@ -234,6 +230,15 @@ function fireShow(item){
         target.stop().slideDown(100);
     }else{
         target.stop().slideUp(100);
+    }
+}
+function hoverShow(item){
+    var target = $(''+$(item).attr('data-target'));
+    $(item).toggleClass('active');
+    if($(item).hasClass('active')){
+        target.css('display', 'block');
+    }else{
+        target.css('display', 'none');
     }
 }
 function showHideFilter(item) {
@@ -252,6 +257,7 @@ function clearFilter(item) {
         $(this).val('');
     });
 }
+
 function dropdownTable(item){
     $(item).toggleClass('active');
     var box = $(item).closest('tr').next('.accordeon__hiiden').find('.accordeon__table');
@@ -353,6 +359,7 @@ function chexkForDelItem(){
 }
 $(document).ready(function () {
     generateRow();
+    $.fancybox.defaults.touch = false;
     inputNumber();
     delItemOrder();
     chexkForDelItem();

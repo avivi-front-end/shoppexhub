@@ -2,6 +2,7 @@
 //= partials/head.html
 <!--end partials/head.html-->
 <div class="global-wrapper">
+
     <div class="main">
         <div class="mbox">
             <div class="scelet">
@@ -20,40 +21,19 @@
                                         <span>на главную</span>
                                     </a>
                                 </div>
-                                <div class="sclad__sb">
-                                    <a href="#" class="button button--iconed">
-                                    <span>
-                                        <b><svg width="20" height="20"><use xlink:href="#button-track"></use></svg><i>Добавить неопознанную посылку <i style="white-space: nowrap"> с трек-номером</i></i></b>
-                                    </span>
-                                    </a>
-                                    <a href="#" class="button button--iconed">
-                                    <span>
-                                        <b><svg width="16" height="19"><use xlink:href="#button-notrack"></use></svg><i>Добавить неопознанную посылку <i style="white-space: nowrap">без трек-номера</i></i></b>
-                                    </span>
-                                    </a>
-                                </div>
-                                <div class="important">
-                                    <i>
-                                        <svg>
-                                            <use xlink:href="#redalert"></use>
-                                        </svg>
-                                    </i>
-                                    <div class="important__text">
-                                        <b>Внимание</b>
-                                        <span>У нас большой опыт доставки посылок из США в Украину. Для того, чтобы максимально реализовать ваши пожелания, мы разработали свою систему доставки, у которой нет аналогов. Гарантия качества - это десятки тысяч постоянных клиентов и сотни тысяч доставленных посылок.</span>
-                                    </div>
-                                </div>
-                                <div class="sclad__ltr lost__center">
-                                    <div class="dayinner__subtitle">
-                                        <span>Поиск</span>
-                                    </div>
-                                    <ul class="lost__tabs">
-                                        <li onclick="lostTabs(this);" class="active"><span>по трек-номеру</span></li>
-                                        <li onclick="lostTabs(this);"><span>по ewid</span></li>
-                                        <li onclick="lostTabs(this);"><span>по с-клиенту</span></li>
-                                        <li onclick="lostTabs(this);"><span>по фамилии</span></li>
-                                        <li onclick="lostTabs(this);"><span>по имени</span></li>
-                                    </ul>
+                                <div class="search__tumbler">
+                                    <label>
+                                        <input type="radio" name="same01">
+                                        <p>
+                                            <b>Ожидаются на склад</b>
+                                        </p>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="same01">
+                                        <p>
+                                            <b>Необходимо передать</b>
+                                        </p>
+                                    </label>
                                 </div>
                                 <div class="manifest__showhide-container">
                                     <div class="sclad__grow-child">
@@ -85,7 +65,7 @@
                                         <form class="manifest__content">
                                             <div class="manifest__superrow">
                                                 <div class="manifest__col">
-                                                    <b>Дата создания:</b>
+                                                    <b>Дата:</b>
                                                     <div class="manifest__row">
                                                         <i>От:</i>
                                                         <div class="manifest__input">
@@ -126,77 +106,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="manifest__col">
-                                                    <b>Дата сканирования:</b>
-                                                    <div class="manifest__row">
-                                                        <i>От:</i>
-                                                        <div class="manifest__input">
-                                                            <i>
-                                                                <svg width="17" height="17">
-                                                                    <use xlink:href="#calendar"></use>
-                                                                </svg>
-                                                            </i>
-                                                            <input type="text">
-                                                        </div>
-                                                        <div class="manifest__input">
-                                                            <i>
-                                                                <svg width="14" height="14">
-                                                                    <use xlink:href="#clock"></use>
-                                                                </svg>
-                                                            </i>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="manifest__row">
-                                                        <i>До:</i>
-                                                        <div class="manifest__input">
-                                                            <i>
-                                                                <svg width="17" height="17">
-                                                                    <use xlink:href="#calendar"></use>
-                                                                </svg>
-                                                            </i>
-                                                            <input type="text">
-                                                        </div>
-                                                        <div class="manifest__input">
-                                                            <i>
-                                                                <svg width="14" height="14">
-                                                                    <use xlink:href="#clock"></use>
-                                                                </svg>
-                                                            </i>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="manifest__col">
-                                                    <b>вес, кг:</b>
-                                                    <div class="manifest__row">
-                                                        <i>От:</i>
-                                                        <div class="manifest__input manifest__input--free">
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="manifest__row">
-                                                        <i>До:</i>
-                                                        <div class="manifest__input manifest__input--free">
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="manifest__superrow">
-                                                <div class="manifest__col">
-                                                    <b>Номер с-клиента:</b>
-                                                    <div class="manifest__row js-input">
-                                                        <input type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="manifest__col">
-                                                    <b>B-клиент:</b>
-                                                    <div class="manifest__row js-input">
-                                                        <input type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="manifest__col">
-                                                    <b>Статус:</b>
+                                                    <b>склад:</b>
                                                     <div class="manifest__row">
                                                         <select name="" class="js-styled">
                                                             <option value="1">1</option>
@@ -204,20 +114,20 @@
                                                             <option value="3">3</option>
                                                         </select>
                                                     </div>
+                                                    <div class="manifest__row manifest__row--rtl">
+                                                        <button type="button" onclick="clearFilter(this);" class="button-simple">
+                                                            <i>
+                                                                <svg width="15" height="15">
+                                                                    <use xlink:href="#little-cross"></use>
+                                                                </svg>
+                                                            </i>
+                                                            <b class="dotted-underline">очистить</b>
+                                                        </button>
+                                                        <button type="submit" class="button button--fff">
+                                                            <span>показать</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="manifest__row manifest__row--rtl">
-                                                <button type="button" onclick="clearFilter(this);" class="button-simple">
-                                                    <i>
-                                                        <svg width="15" height="15">
-                                                            <use xlink:href="#little-cross"></use>
-                                                        </svg>
-                                                    </i>
-                                                    <b class="dotted-underline">очистить</b>
-                                                </button>
-                                                <button type="submit" class="button button--fff">
-                                                    <span>искать</span>
-                                                </button>
                                             </div>
                                         </form>
                                     </div>
@@ -251,17 +161,13 @@
                                 <div class="tickets">
                                     <div class="tickets__item">
                                         <div class="tickets__top">
-                                            <div class="tickets__title">
-                                                <b>#</b>
-                                                <p>1</p>
-                                            </div>
-                                            <div class="tickets__title">
+                                            <div class="tickets__title tickets__title--nowidth">
                                                 <b>ewid:</b>
                                                 <p>VB000342433NPI</p>
                                             </div>
                                             <div class="tickets__title tickets__title--nobr">
                                                 <b>трек-номер:</b>
-                                                <p><span onclick="toggleHidden(this);" class="js-th-btn" data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
+                                                <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
                                             </div>
                                             <div class="tickets__title noway">
                                                 <a href="#" class="tickets__redact">
@@ -270,60 +176,16 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="accordeon__hidden tickets__hidden">
-                                            <div class="accordeon__table">
-                                                <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
-                                                <table>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Наименование</th>
-                                                        <th>ссылка</th>
-                                                        <th>шт.</th>
-                                                        <th>цена за шт.</th>
-                                                        <th>сумма</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Футболка</td>
-                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
-                                                        <td>10</td>
-                                                        <td>$5.00</td>
-                                                        <td>$50.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Футболка</td>
-                                                        <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
-                                                        <td>10</td>
-                                                        <td>$5.00</td>
-                                                        <td>$50.00</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="tickets__bottom">
+                                        <div class="tickets__bottom tickets__bottom--full">
                                             <div class="tickets__bottom-wraper">
                                                 <div class="tickets__subwrap">
                                                     <div class="tickets__col">
-
-                                                        <div class="tickets__flexer">
-                                                            <i>
-                                                                <svg width="16" height="16"><use xlink:href="#t-plus"></use></svg>
-                                                            </i>
-                                                            <p><b>Добавлена:</b><span>06.11.2017  13:07:34</span></p>
-                                                        </div>
                                                         <div class="tickets__flexer">
                                                             <i><svg width="17" height="13"><use xlink:href="#t-rad"></use></svg></i>
                                                             <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
                                                         </div>
                                                     </div>
                                                     <div class="tickets__col tickets__col--sec">
-                                                        <div class="tickets__flexer">
-                                                            <i><svg width="14" height="17"><use xlink:href="#t-rad2"></use></svg></i>
-                                                            <p><b>вес, кг</b><span>2,4 кг</span></p>
-                                                            <i><svg width="17" height="17"><use xlink:href="#t-rad3"></use></svg></i>
-                                                            <p><b>габариты, см (Д*Ш*В)</b><span>12*15*30</span></p>
-                                                        </div>
                                                         <div class="tickets__flexer">
                                                             <p><b>в-клиент:</b><span><img src="images/demo/icon1.jpg" alt="">velox box</span></p>
                                                         </div>
@@ -332,8 +194,6 @@
                                                         <div class="tickets__flexer tickets__flexer--full">
                                                             <p class="tickets__minirow"><b>с-клиент:</b><svg width="19" height="15"><use xlink:href="#icon-card"></use></svg><span>VB1001001</span></p>
                                                             <p class="tickets__minirow tickets__minirow--big">Sergey Tuzenkov</p>
-                                                            <p class="tickets__minirow" data-title="Разнообразный и богатый опыт постоянный количественный ростююсфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации"><b>комментарий:</b><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg></p>
-                                                            <p class="tickets__minirow">Разнообразный и богатый опыт постоянный количественный...</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -390,36 +250,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <a href="#" class="button button--fff">
+                                                        <span>запросить трансфер</span>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="tickets__icons">
-                                                <i class="red">
-                                                    <svg width="16" height="16">
-                                                        <use xlink:href="#fill-one"></use>
-                                                    </svg>
-                                                </i>
-                                                <i class="green">
-                                                    <svg width="17" height="17">
-                                                        <use xlink:href="#fill-two"></use>
-                                                    </svg>
-                                                </i>
-                                                <i class="red">
-                                                    <svg width="17" height="17">
-                                                        <use xlink:href="#fill-three"></use>
-                                                    </svg>
-                                                </i>
-                                                <i class="green">
-                                                    <svg width="15" height="16">
-                                                        <use xlink:href="#fill-four"></use>
-                                                    </svg>
-                                                </i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!--start partials/paginator.html-->
-                                //= partials/paginator.html
-                                <!--end partials/paginator.html-->
                             </div>
                         </div>
                     </div>

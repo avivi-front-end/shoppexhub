@@ -7,14 +7,14 @@
             <td  width="100">
                 <div class="js-input-number js-input">
                     <div class="js-number-minus">
-                        <svg  width="10" height="10">
-                            <circle cx="5" cy="5" r="4" stroke="black" stroke-width="3" fill="red" />
+                        <svg  width="12" height="12">
+                            <use xlink:href="#pp-minus"></use>
                         </svg>
                     </div>
-                    <input type="text" placeholder="" name="order[][count]" value="1" maxlength="2">
+                    <input type="text" placeholder="" name="order[][count]" value="1" maxlength="2" required="required">
                     <div class="js-number-plus">
-                        <svg  width="10" height="10">
-                            <circle cx="5" cy="5" r="4" stroke="black" stroke-width="3" fill="red" />
+                        <svg  width="12" height="12">
+                            <use xlink:href="#pp-plus"></use>
                         </svg>
                     </div>
                 </div>
@@ -267,6 +267,928 @@
 
         </form>
     </div>
+    <div class="journal" id="ordernew">
+        <div class="journal__title">
+            <span>Связать посылку</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="journal__content">
+            <div class="sclad__center">
+                <b>Выбрана посылка:</b>
+            </div>
+            <div class="tickets__item">
+                    <div class="tickets__top">
+                        <div class="tickets__title">
+                            <b>#</b>
+                            <p>1</p>
+                        </div>
+                        <div class="tickets__title">
+                            <b>ewid:</b>
+                            <p>VB000342433NPI</p>
+                        </div>
+                        <div class="tickets__title tickets__title--nobr">
+                            <b>трек-номер:</b>
+                            <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
+                        </div>
+                        <div class="tickets__title noway">
+                            <a href="#" class="tickets__redact tickets__redact--blue">
+                                <svg width="12" height="15"><use xlink:href="#st-pop02"></use></svg>
+                                <span>Ожидается на складе</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tickets__bottom tickets__bottom--full">
+                        <div class="tickets__bottom-wraper">
+                            <div class="tickets__subwrap">
+                                <div class="tickets__col">
+
+                                    <div class="tickets__flexer">
+                                        <i><svg width="16" height="16"><use xlink:href="#icon-added"></use></svg></i>
+                                        <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--sec">
+                                    <div class="tickets__flexer">
+                                        <p><b>в-клиент:</b><span><img src="images/demo/icon1.jpg" alt="">velox box</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--th">
+                                    <div class="tickets__flexer tickets__flexer--full">
+                                        <p class="tickets__minirow"><b>с-клиент:</b><svg width="19" height="15"><use xlink:href="#icon-card"></use></svg><span>VB1001001</span></p>
+                                        <p class="tickets__minirow tickets__minirow--big">Sergey Tuzenkov</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tickets__subbottom">
+                                <div class="tickets__hover">
+                                    <p>
+                                        <svg width="19" height="20"><use xlink:href="#screpca"></use></svg>
+                                        <b>вложенные файлы:</b>
+                                        <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
+                                        <span>3</span>
+                                    </p>
+                                    <div class="tickets__subhidden">
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordeon__hidden tickets__hidden">
+                        <div class="accordeon__table">
+                            <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
+                            <table>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Наименование</th>
+                                    <th>ссылка</th>
+                                    <th>шт.</th>
+                                    <th>цена за шт.</th>
+                                    <th>сумма</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <div class="sclad__center">
+                <b>Связать с посылкой:</b>
+            </div>
+            <div class="sclad__grow-child">
+                <form class="search__field">
+                    <input type="text" id="inp013">
+                    <button type="submit" class="button button--fff">
+                        <span>искать</span>
+                    </button>
+                </form>
+                <a href="#inp013" class="button-simple js-clear">
+                    <i>
+                        <svg width="15" height="15">
+                            <use xlink:href="#little-cross"></use>
+                        </svg>
+                    </i>
+                    <b class="dotted-underline">очистить</b>
+                </a>
+            </div>
+            <div class="tickets__item">
+                    <div class="tickets__top">
+                        <div class="tickets__title tickets__title--full tickets__title--nobr">
+                            <b>трек-номер:</b>
+                            <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
+                        </div>
+                        <div class="tickets__title noway">
+                            <a href="#" class="tickets__redact tickets__redact--green">
+                                <svg width="11" height="14"><use xlink:href="#st-pop03"></use></svg>
+                                <span>обработка на складе</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tickets__bottom">
+                        <div class="tickets__bottom-wraper">
+                            <div class="tickets__subwrap">
+                                <div class="tickets__col">
+
+                                    <div class="tickets__flexer">
+                                        <i><svg width="17" height="13"><use xlink:href="#t-rad"></use></svg></i>
+                                        <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="tickets__col tickets__col--th">
+                                    <div class="tickets__flexer tickets__flexer--full">
+                                        <p class="tickets__minirow" data-title="Разнообразный и богатый опыт постоянный количественный ростююсфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации"><b>комментарий:</b><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg></p>
+                                        <p class="tickets__minirow">Разнообразный и богатый опыт постоянный количественный...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tickets__subbottom">
+                                <div class="tickets__hover">
+                                    <p>
+                                        <svg width="19" height="20"><use xlink:href="#screpca"></use></svg>
+                                        <b>вложенные файлы:</b>
+                                        <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
+                                        <span>3</span>
+                                    </p>
+                                    <div class="tickets__subhidden">
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tickets__icons">
+                            <i class="green">
+                                <svg width="15" height="16">
+                                    <use xlink:href="#fill-four"></use>
+                                </svg>
+                            </i>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+        <div class="journal__bottom">
+            <div class="journal__buttons">
+                <a href="javascript:$.fancybox.close();" class="button-simple">
+                    <b class="dotted-underline">отмена</b>
+                </a>
+                <button class="button" type="submit">
+                    <span>далее</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="journal" id="ordernew2">
+        <div class="journal__title">
+            <span>Связать посылку</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="journal__content">
+            <div class="popup__alert">
+                <svg width="52" height="52"><use xlink:href="#big-quest2"></use></svg>
+            </div>
+            <div class="sclad__center">
+                <b>Вы уверены, что посылка:</b>
+            </div>
+            <div class="tickets__item">
+                    <div class="tickets__top">
+                        <div class="tickets__title">
+                            <b>#</b>
+                            <p>1</p>
+                        </div>
+                        <div class="tickets__title">
+                            <b>ewid:</b>
+                            <p>VB000342433NPI</p>
+                        </div>
+                        <div class="tickets__title tickets__title--nobr">
+                            <b>трек-номер:</b>
+                            <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
+                        </div>
+                        <div class="tickets__title noway">
+                            <a href="#" class="tickets__redact tickets__redact--blue">
+                                <svg width="12" height="15"><use xlink:href="#st-pop02"></use></svg>
+                                <span>Ожидается на складе</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tickets__bottom tickets__bottom--full">
+                        <div class="tickets__bottom-wraper">
+                            <div class="tickets__subwrap">
+                                <div class="tickets__col">
+
+                                    <div class="tickets__flexer">
+                                        <i><svg width="16" height="16"><use xlink:href="#icon-added"></use></svg></i>
+                                        <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--sec">
+                                    <div class="tickets__flexer">
+                                        <p><b>в-клиент:</b><span><img src="images/demo/icon1.jpg" alt="">velox box</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--th">
+                                    <div class="tickets__flexer tickets__flexer--full">
+                                        <p class="tickets__minirow"><b>с-клиент:</b><svg width="19" height="15"><use xlink:href="#icon-card"></use></svg><span>VB1001001</span></p>
+                                        <p class="tickets__minirow tickets__minirow--big">Sergey Tuzenkov</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tickets__subbottom">
+                                <div class="tickets__hover">
+                                    <p>
+                                        <svg width="19" height="20"><use xlink:href="#screpca"></use></svg>
+                                        <b>вложенные файлы:</b>
+                                        <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
+                                        <span>3</span>
+                                    </p>
+                                    <div class="tickets__subhidden">
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordeon__hidden tickets__hidden">
+                        <div class="accordeon__table">
+                            <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
+                            <table>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Наименование</th>
+                                    <th>ссылка</th>
+                                    <th>шт.</th>
+                                    <th>цена за шт.</th>
+                                    <th>сумма</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <div class="sclad__center">
+                <b>является посылкой:</b>
+            </div>
+
+            <div class="tickets__item">
+                    <div class="tickets__top">
+                        <div class="tickets__title tickets__title--full tickets__title--nobr">
+                            <b>трек-номер:</b>
+                            <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
+                        </div>
+                        <div class="tickets__title noway">
+                            <a href="#" class="tickets__redact tickets__redact--green">
+                                <svg width="11" height="14"><use xlink:href="#st-pop03"></use></svg>
+                                <span>обработка на складе</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tickets__bottom">
+                        <div class="tickets__bottom-wraper">
+                            <div class="tickets__subwrap">
+                                <div class="tickets__col">
+
+                                    <div class="tickets__flexer">
+                                        <i><svg width="17" height="13"><use xlink:href="#t-rad"></use></svg></i>
+                                        <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="tickets__col tickets__col--th">
+                                    <div class="tickets__flexer tickets__flexer--full">
+                                        <p class="tickets__minirow" data-title="Разнообразный и богатый опыт постоянный количественный ростююсфера нашей активности в значительной степени обуславливает создание соответствующий условий активизации"><b>комментарий:</b><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg></p>
+                                        <p class="tickets__minirow">Разнообразный и богатый опыт постоянный количественный...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tickets__subbottom">
+                                <div class="tickets__hover">
+                                    <p>
+                                        <svg width="19" height="20"><use xlink:href="#screpca"></use></svg>
+                                        <b>вложенные файлы:</b>
+                                        <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
+                                        <span>3</span>
+                                    </p>
+                                    <div class="tickets__subhidden">
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tickets__icons">
+                            <i class="green">
+                                <svg width="15" height="16">
+                                    <use xlink:href="#fill-four"></use>
+                                </svg>
+                            </i>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+        <div class="journal__bottom">
+            <div class="journal__buttons">
+                <a href="javascript:$.fancybox.close();" class="button-simple">
+                    <b class="dotted-underline">о нет</b>
+                </a>
+                <button class="button" type="submit">
+                    <span>о да</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="journal" id="order">
+        <div class="journal__title">
+            <span>Связать посылку</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="journal__content">
+            <div class="sclad__center">
+                <b>Выбрана посылка:</b>
+            </div>
+            <div class="tickets">
+                <div class="tickets__item">
+                    <div class="tickets__top">
+                        <div class="tickets__title">
+                            <b>#</b>
+                            <p>1</p>
+                        </div>
+                        <div class="tickets__title">
+                            <b>ewid:</b>
+                            <p>VB000342433NPI</p>
+                        </div>
+                        <div class="tickets__title tickets__title--nobr">
+                            <b>трек-номер:</b>
+                            <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
+                        </div>
+                        <div class="tickets__title noway">
+                            <a href="#" class="tickets__redact">
+                                <svg width="10" height="10"><use xlink:href="#white-pen"></use></svg>
+                                <span>требует правки и&nbsp;уточнения данных</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tickets__bottom">
+                        <div class="tickets__bottom-wraper">
+                            <div class="tickets__subwrap">
+                                <div class="tickets__col">
+
+                                    <div class="tickets__flexer">
+                                        <i><svg width="17" height="13"><use xlink:href="#t-rad"></use></svg></i>
+                                        <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--sec">
+                                    <div class="tickets__flexer">
+                                        <p><b>в-клиент:</b><span><img src="images/demo/icon1.jpg" alt="">velox box</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--th">
+                                    <div class="tickets__flexer tickets__flexer--full">
+                                        <p class="tickets__minirow"><b>с-клиент:</b><svg width="19" height="15"><use xlink:href="#icon-card"></use></svg><span>VB1001001</span></p>
+                                        <p class="tickets__minirow tickets__minirow--big">Sergey Tuzenkov</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tickets__subbottom">
+                                <div class="tickets__hover">
+                                    <p>
+                                        <svg width="19" height="20"><use xlink:href="#screpca"></use></svg>
+                                        <b>вложенные файлы:</b>
+                                        <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
+                                        <span>3</span>
+                                    </p>
+                                    <div class="tickets__subhidden">
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tickets__icons">
+                            <i class="green">
+                                <svg width="15" height="16">
+                                    <use xlink:href="#fill-four"></use>
+                                </svg>
+                            </i>
+                            <i class="red">
+                                <svg width="17" height="17">
+                                    <use xlink:href="#fill-ahtung"></use>
+                                </svg>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="accordeon__hidden tickets__hidden">
+                        <div class="accordeon__table">
+                            <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
+                            <table>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Наименование</th>
+                                    <th>ссылка</th>
+                                    <th>шт.</th>
+                                    <th>цена за шт.</th>
+                                    <th>сумма</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sclad__center">
+                <b>Связать с посылкой:</b>
+            </div>
+            <div class="sclad__grow-child">
+                <form class="search__field">
+                    <input type="text" id="inp01">
+                    <button type="submit" class="button button--fff">
+                        <span>искать</span>
+                    </button>
+                </form>
+                <a href="#inp01" class="button-simple js-clear">
+                    <i>
+                        <svg width="15" height="15">
+                            <use xlink:href="#little-cross"></use>
+                        </svg>
+                    </i>
+                    <b class="dotted-underline">очистить</b>
+                </a>
+            </div>
+        </div>
+        <div class="journal__bottom">
+            <div class="journal__buttons">
+                <a href="javascript:$.fancybox.close();" class="button-simple">
+                    <b class="dotted-underline">отмена</b>
+                </a>
+                <button class="button" type="submit">
+                    <span>далее</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="journal" id="order2">
+        <div class="journal__title">
+            <span>Связать посылку</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="journal__content">
+            <div class="sclad__center">
+                <b>Выбрана посылка:</b>
+            </div>
+            <div class="tickets">
+                <div class="tickets__item">
+                    <div class="tickets__top">
+                        <div class="tickets__title">
+                            <b>#</b>
+                            <p>1</p>
+                        </div>
+                        <div class="tickets__title">
+                            <b>ewid:</b>
+                            <p>VB000342433NPI</p>
+                        </div>
+                        <div class="tickets__title tickets__title--nobr">
+                            <b>трек-номер:</b>
+                            <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
+                        </div>
+                        <div class="tickets__title noway">
+                            <a href="#" class="tickets__redact">
+                                <svg width="10" height="10"><use xlink:href="#white-pen"></use></svg>
+                                <span>требует правки и&nbsp;уточнения данных</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tickets__bottom">
+                        <div class="tickets__bottom-wraper">
+                            <div class="tickets__subwrap">
+                                <div class="tickets__col">
+
+                                    <div class="tickets__flexer">
+                                        <i><svg width="17" height="13"><use xlink:href="#t-rad"></use></svg></i>
+                                        <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--sec">
+                                    <div class="tickets__flexer">
+                                        <p><b>в-клиент:</b><span><img src="images/demo/icon1.jpg" alt="">velox box</span></p>
+                                    </div>
+                                </div>
+                                <div class="tickets__col tickets__col--th">
+                                    <div class="tickets__flexer tickets__flexer--full">
+                                        <p class="tickets__minirow"><b>с-клиент:</b><svg width="19" height="15"><use xlink:href="#icon-card"></use></svg><span>VB1001001</span></p>
+                                        <p class="tickets__minirow tickets__minirow--big">Sergey Tuzenkov</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tickets__subbottom">
+                                <div class="tickets__hover">
+                                    <p>
+                                        <svg width="19" height="20"><use xlink:href="#screpca"></use></svg>
+                                        <b>вложенные файлы:</b>
+                                        <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
+                                        <span>3</span>
+                                    </p>
+                                    <div class="tickets__subhidden">
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput__item-wrap">
+                                            <div class="fileinput__item">
+                                                <img src="images/demo/test.jpg" alt="" data-object-fit>
+                                                <a data-fancybox href="images/demo/test.jpg">
+                                                    <svg width="22" height="21">
+                                                        <use xlink:href="#greenplus"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="fileinput__item-info">
+                                                <p class="js-file-name">jebuble.clod</p>
+                                                <p class="js-file-size">100500 Kg</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tickets__icons">
+                            <i class="green">
+                                <svg width="15" height="16">
+                                    <use xlink:href="#fill-four"></use>
+                                </svg>
+                            </i>
+                            <i class="red">
+                                <svg width="17" height="17">
+                                    <use xlink:href="#fill-ahtung"></use>
+                                </svg>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="accordeon__hidden tickets__hidden">
+                        <div class="accordeon__table">
+                            <p class="accordeon__flex--aic"><b>Содержимое посылки:</b>394953939599453458340583045833543409949494999497</p>
+                            <table>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Наименование</th>
+                                    <th>ссылка</th>
+                                    <th>шт.</th>
+                                    <th>цена за шт.</th>
+                                    <th>сумма</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Футболка</td>
+                                    <td><a href="#"><svg width="16" height="16"><use xlink:href="#icon-url"></use></svg></a></td>
+                                    <td>10</td>
+                                    <td>$5.00</td>
+                                    <td>$50.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sclad__center">
+                <b>Связать с посылкой:</b>
+            </div>
+            <div class="sclad__grow-child">
+                <form class="search__field">
+                    <input type="text" id="inp012">
+                    <button type="submit" class="button button--fff">
+                        <span>искать</span>
+                    </button>
+                </form>
+                <a href="#inp012" class="button-simple js-clear">
+                    <i>
+                        <svg width="15" height="15">
+                            <use xlink:href="#little-cross"></use>
+                        </svg>
+                    </i>
+                    <b class="dotted-underline">очистить</b>
+                </a>
+            </div>
+            <div class="important important--center">
+                <i>
+                    <svg>
+                        <use xlink:href="#cryalert"></use>
+                    </svg>
+                </i>
+                <h2>НЕ НАЙДЕНА ПОСЫЛКА # 834958934275789</h2>
+            </div>
+        </div>
+        <div class="journal__bottom">
+            <div class="journal__buttons">
+
+                <a href="javascript:$.fancybox.close();" class="button" type="submit">
+                    <span>закрыть</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="journal__imgitem etalon">
         <div class="journal__img-wrap">
             <img src="images/pdf.jpg" alt="" data-object-fit>
@@ -340,6 +1262,141 @@
             <button type="submit" class="button button--fff  button--forward">
                 <span>далее</span>
             </button>
+        </div>
+    </div>
+    <div class="popup" id="change-carrr">
+        <div class="journal__title">
+            <span>Замена машины</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="popup__content">
+            <ul class="popup__choose-car popup__choose-car--single">
+                <li>
+                    <label>
+                       <i>
+                           <svg width="18px" height="23px"><use xlink:href="#change-car"></use></svg>
+                       </i>
+                        <b>Машина 1:</b>
+                        <span>123456</span>
+                        <strong>lasership</strong>
+                    </label>
+                </li>
+            </ul>
+            <b>Выберите машину для замены:</b>
+            <ul class="popup__choose-car">
+                <li>
+                    <label>
+                        <span class="styled">
+                            <input type="radio" name="samecar">
+                            <i></i>
+                        </span>
+                        <b>Машина 1:</b>
+                        <span>123456</span>
+                        <strong>lasership</strong>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span class="styled">
+                            <input type="radio" name="samecar">
+                            <i></i>
+                        </span>
+                        <b>Машина 2:</b>
+                        <span>1234aswdf56</span>
+                        <strong>Dhl</strong>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="popup__bottom">
+            <a href="javascript:$.fancybox.close();" class="button-simple">
+                <b class="dotted-underline">закрыть</b>
+            </a>
+            <button type="submit" class="button button--fff  button--forward">
+                <span>далее</span>
+            </button>
+        </div>
+    </div>
+    <div class="popup" id="change-carrr2">
+        <div class="journal__title">
+            <span>Замена машины</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="popup__content">
+            <div class="popup__alert">
+                <svg width="52" height="52"><use xlink:href="#big-quest2"></use></svg>
+            </div>
+            <div class="sclad__center">
+                <b>Вы уверены, что хотите:</b>
+            </div>
+
+            <ul class="popup__choose-car popup__choose-car--single">
+                <li>
+                    <label>
+                        <i>
+                            <svg width="18px" height="23px"><use xlink:href="#change-car"></use></svg>
+                        </i>
+                        <b>Машина 1:</b>
+                        <span>123456</span>
+                        <strong>lasership</strong>
+                    </label>
+                </li>
+            </ul>
+            <div class="sclad__center">
+                <b>Заменить на:</b>
+            </div>
+
+            <ul class="popup__choose-car popup__choose-car--single">
+                <li>
+                    <label>
+                        <i>
+                            <svg width="18px" height="20px"><use xlink:href="#icon-opencar"></use></svg>
+                        </i>
+                        <b>Машина 1:</b>
+                        <span>123456</span>
+                        <strong>lasership</strong>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="popup__bottom">
+            <a href="javascript:$.fancybox.close();" class="button-simple">
+                <b class="dotted-underline">нет</b>
+            </a>
+            <button type="submit" class="button">
+                <span>да</span>
+            </button>
+        </div>
+    </div>
+    <div class="popup" id="change-carrr3">
+        <div class="journal__title">
+            <span>Замена машины</span>
+            <div class="journal__close" onclick="$.fancybox.close();">
+                <svg>
+                    <use xlink:href="#close-cross"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="popup__content">
+            <div class="popup__alert">
+                <svg width="52" height="52"><use xlink:href="#blue-alert"></use></svg>
+            </div>
+            <div class="sclad__center">
+                <h2>Машина успешно заменена!</h2>
+            </div>
+        </div>
+        <div class="popup__bottom popup__bottom--center">
+            <a href="javascript:$.fancybox.close();" class="button">
+                <span>закрыть</span>
+            </a>
         </div>
     </div>
     <div class="popup" id="choose-car-check">

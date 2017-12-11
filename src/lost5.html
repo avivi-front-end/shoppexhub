@@ -165,14 +165,14 @@
                                         <td  width="100">
                                             <div class="js-input-number js-input">
                                                 <div class="js-number-minus">
-                                                    <svg  width="10" height="10">
-                                                        <circle cx="5" cy="5" r="4" stroke="black" stroke-width="3" fill="red" />
+                                                    <svg  width="12" height="12">
+                                                        <use xlink:href="#pp-minus"></use>
                                                     </svg>
                                                 </div>
                                                 <input type="text" placeholder="" name="order[0][count]" value="1" maxlength="2" required="required">
                                                 <div class="js-number-plus">
-                                                    <svg  width="10" height="10">
-                                                        <circle cx="5" cy="5" r="4" stroke="black" stroke-width="3" fill="red" />
+                                                    <svg  width="12" height="12">
+                                                        <use xlink:href="#pp-plus"></use>
                                                     </svg>
                                                 </div>
                                             </div>
@@ -201,9 +201,12 @@
                                 </table>
                                 <div class="same-table__butts">
                                     <button class="js-generate-butt" type="button">
-                                        <b>
-                                            <span class="dotted-underline">добавить еще один товар в посылку</span>
-                                        </b>
+                                        <span>
+                                            <svg width="16" height="16">
+                                                <use xlink:href="#big-plus"></use>
+                                            </svg>
+                                            <b class="dotted-underline">добавить еще один товар в посылку</b>
+                                        </span>
                                     </button>
                                     <button class="button">
                                         <span>сохранить</span>
