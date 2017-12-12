@@ -269,7 +269,11 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
 .fix-class .search__field--small{ margin-left: 0;}
 .journal{ width: 100%; max-width: 906px; padding: 0;
     .fancybox-close-small{ display: none;}
+    .status{ min-width: 1px; margin: 0 4px;}
     &__title{ color: #fff; font-size: 30px; display: flex; justify-content: space-between; align-items: center; background-color: #4673a4; width: 100%; height: 65px; font-weight: 300; padding: 0 30px;}
+    &__subtitle{ font-size: 14px; display: inline-flex; justify-content: flex-start; align-items: center; vertical-align: bottom; margin-left: 24px;
+        svg{fill:#fff; margin-right: 8px;}
+    }
     &__close{ cursor: pointer;
         svg{ width: 25px; height: 25px;}
     }
@@ -287,7 +291,7 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     }
     &__time{ width: 148px; min-height: 26px; display: flex; align-items: center; justify-content: flex-start; flex-shrink: 0;}
     &__description{ display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap;}
-    &__spanfix{ display: flex; justify-content: flex-start; align-items: center; width: 100%; min-height: 26px; margin-bottom: 6px;
+    &__spanfix{ display: flex; justify-content: flex-start; align-items: center; width: 100%; min-height: 26px; margin-bottom: 6px; line-height: 1.25;
         &--half{ width: 50%;}
     }
     &__img-wrap{ display: block;height: 98px; width: 100%; box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.26);}
@@ -577,6 +581,7 @@ tr.active{outline:1px solid #ed5e5e; background-color: #fff4f4; }
     &--10{ background-color: #d5d2d2;svg{ width: 13px;height: 11px;}}
     &--11{ background-color: #cb7fd0;svg{ width: 19px;height: 15px;}}
     i{ position: absolute; left: 10px; top: 0; width: 20px; height: 100%; display: flex; justify-content: flex-start; align-items: center;}
+    &.package--white{ width:auto; height: auto; background-color: transparent; display: inline-flex;}
 }
 .search{
     &__tumbler{ margin: 0 -1px; display: flex; width: 100%; justify-content: space-between; margin-bottom: 16px;
