@@ -23,13 +23,13 @@
                                 </div>
                                 <div class="search__tumbler">
                                     <label>
-                                        <input type="radio" name="same01" checked="checked">
+                                        <input type="radio" name="same01">
                                         <p>
                                             <b>Ожидаются на склад</b>
                                         </p>
                                     </label>
                                     <label>
-                                        <input type="radio" name="same01">
+                                        <input type="radio" name="same01" checked="checked">
                                         <p>
                                             <b>Необходимо передать</b>
                                         </p>
@@ -161,23 +161,19 @@
                                 <div class="tickets">
                                     <div class="tickets__item">
                                         <div class="tickets__top">
-                                            <div class="tickets__title tickets__title--nowidth">
-                                                <b>ewid:</b>
-                                                <p>VB000342433NPI</p>
-                                            </div>
-                                            <div class="tickets__title tickets__title--nobr">
+                                            <div class="tickets__title tickets__title--full tickets__title--nobr">
                                                 <b>трек-номер:</b>
                                                 <p><span data-title="Содержимое посылки:  394953939599453458340583045833543409949494999497"><svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>945999699294994995906029950694996044</span></p>
                                             </div>
                                             <div class="tickets__title noway">
-                                                <a href="#" class="tickets__redact">
+                                                <div  class="tickets__redact">
                                                     <svg width="10" height="10"><use xlink:href="#white-pen"></use></svg>
                                                     <span>требует правки и&nbsp;уточнения данных</span>
-                                                </a>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="tickets__bottom tickets__bottom--full">
-                                            <div class="tickets__bottom-wraper">
+                                            <div class="tickets__bottom-wraper tickets__bottom-wraper--onerow">
                                                 <div class="tickets__subwrap">
                                                     <div class="tickets__col">
                                                         <div class="tickets__flexer">
@@ -185,15 +181,9 @@
                                                             <p><b>Отсканирована:</b><span>06.11.2017  13:07:34</span></p>
                                                         </div>
                                                     </div>
-                                                    <div class="tickets__col tickets__col--sec">
+                                                    <div class="tickets__col">
                                                         <div class="tickets__flexer">
                                                             <p><b>в-клиент:</b><span><img src="images/demo/icon1.jpg" alt="">velox box</span></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tickets__col tickets__col--th">
-                                                        <div class="tickets__flexer tickets__flexer--full">
-                                                            <p class="tickets__minirow"><b>с-клиент:</b><svg width="19" height="15"><use xlink:href="#icon-card"></use></svg><span>VB1001001</span></p>
-                                                            <p class="tickets__minirow tickets__minirow--big">Sergey Tuzenkov</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -202,8 +192,9 @@
                                                         <p>
                                                             <svg width="19" height="20"><use xlink:href="#screpca"></use></svg>
                                                             <b>вложенные файлы:</b>
-                                                            <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
                                                             <span>3</span>
+                                                            <svg width="12" height="12"><use xlink:href="#informer-pin"></use></svg>
+
                                                         </p>
                                                         <div class="tickets__subhidden">
                                                             <div class="fileinput__item-wrap">
@@ -251,12 +242,13 @@
                                                         </div>
                                                     </div>
                                                     <a href="#" class="button button--fff">
-                                                        <span>запросить трансфер</span>
+                                                        <span>Уведомить о посылке</span>
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <!--start partials/paginator.html-->
                                 //= partials/paginator.html
